@@ -65,11 +65,10 @@ export default class App extends Component {
                 operation: equals ? null : operation,
                 current: equals ? 0 : 1,
                 clearDisplay: !equals,
+                values
             })
         }
     }
-
-
 
     render() {
         return (
@@ -90,7 +89,7 @@ export default class App extends Component {
                     <Button label="1" onClick={this.addDigit}/>
                     <Button label="2" onClick={this.addDigit}/>
                     <Button label="3" onClick={this.addDigit}/>
-                    <Button label="+" operation onCLick={this.setOperation} />
+                    <Button label="+" operation onClick={this.setOperation} />
                     <Button label="0" double onClick={this.addDigit}/>
                     <Button label="." onClick={this.addDigit} />
                     <Button label="=" operation  onClick={this.setOperation} />
